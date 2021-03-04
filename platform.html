@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Jungle</title>
+     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+    function start(x){
+        x.style.height="37px";
+        x.style.width="37px";
+    }
+    function end(x){
+        x.style.height="30px";
+        x.style.width="30px";
+    }
+           function myf(){
+            let element = document.createElement('p');
+            element.setAttribute('class','message');
+            let content = document.querySelector('.send-btn').value;
+            element.innerHTML = content;
+            console.log(content);
+            document.querySelector('.chat-cat').appendChild(element);
+        }
+        
+    </script>
+     </head>
+    <body>
+
+   <div class="main-div">
+       <div class="header-cont">
+            <img src="profile2.png">
+            <button class="header-but">Story</button>
+            <button class="header-but">Settings</button>
+        </div>
+       
+        <div class="search-field">
+            <input type="search" class="search-btn" placeholder="search">
+            <img src="search-icon.png">
+        </div>
+       
+      <div class="chat-cont"></div>
+       
+       <div class="header-chat">
+        <img src="profile2.png">
+       </div>
+       
+     <div class="chat-cat"></div>
+       
+       <div class="send-fiel">
+         <input type="text" class="send-btn" placeholder="Type your message">
+           <img onmouseover="start(this)" onmouseout="end(this)" alt="Emoji" width="30" height="30" src="Emoji.png" class="first-img">
+           <img src="send1.png" class="second-img" onclick="myf()">
+         </div>
+   </div>
+
+    </body>
+</html>

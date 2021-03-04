@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>Welcome to Jungle</title>
+    <link rel="stylesheet" href="style.css">
+    <script >
+      function start(z){
+        z.style.height="35px";
+        z.style.width="35px";
+    }
+    function end(z){
+        z.style.height="25px";
+        z.style.width="25px";
+    }
+    function myform(e)
+        {
+            e.preventDefault();
+            console.log("got here");
+         var name = document.getElementById("input-field1").value;
+         var name2 = document.getElementById("input-field2").value;
+            var x = "welcome back " + name;
+            if(name == "serge" && name2 == "Bluecamera"){
+            
+              if(confirm(x)){
+                 window.open ("./platform.html");
+              }
+                else{
+                    alert("User Id and password not march!TRY AGAIN");
+                }
+        }
+        }
+    </script>
+</head>
+    <body>
+        <div class="hero">
+            <div class="form-box">
+                <div class="button-box">
+                    <div class="logos">
+                <img src="logo2.jpg"><span style="font-size: 30px;color: darkolivegreen;font-family: arial black;text-align: center">Jungle</span>
+                </div>
+                    <div id="btn"></div>
+                  <button type="button" class="box-btn" onclick="login()">Log In</button>
+                  <button type="button" class="box-btn" onclick="register()">Register</button>
+                </div>
+                
+                <div class="social-media">
+                   <a href="https://www.facebook.com/?ref=logo" target="_blank"><img onmouseover="start(this)" onmouseout="end(this)" alt="facebook" width="25" height="25" src="facebook-icon.png"></a> 
+                   <a href="https://www.twitter.com" target="_blank"><img onmouseover="start(this)" onmouseout="end(this)" alt="ftwitter-icon" width="25" height="25" src="twitter-icon.jpg"></a>
+                   <a href="https://www.instagram.com/rwbtsevaserge/" target="_blank"><img onmouseover="start(this)" onmouseout="end(this)" alt="download"  width="25" height="25" src="download.jpg"></a>
+                   <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><img onmouseover="start(this)" onmouseout="end(this)" alt="gmail2" width="25" height="25" src="gmail2.png"></a>
+                    
+                </div>
+                
+                <form onsubmit="myform(this)" id="login" class="input-section">
+                    <div class="avator">
+<!--                    <input class="file-upload-input" type="file" onchange="readURL(this)" accept="image/x-png">-->
+                </div>
+                    
+                   <input type="text" id="input-field1" class="input-field" placeholder= "User Id" required>
+                   <input type="password" id="input-field2" class="input-field"  placeholder= "Enter Password" required>
+                    <input type="checkbox" class="check-box"><span>Remeber Password</span>
+                    <button class="submit-btn" >Log In</button>
+                </form>
+                <form id="register" class="input-section">
+                   <input type="text" class="input-field"  placeholder= "Enter First name" required>
+                    <input type="text" class="input-field"  placeholder= "Enter Second name" required>
+                    <input type="number" class="input-field" placeholder="Enter Phone number" >
+                    <input type="Email" class="input-field" placeholder="Example: jhon@email.com">
+                    <input type="email" class="input-field" placeholder="re-enter email">
+                    <input type="checkbox" class="check-box"><span>I Agree all terms and conditions</span>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            var x= document.getElementById("login");
+            var y= document.getElementById("register");
+            var z= document.getElementById("btn");
+            function register(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+            function login(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0";
+            }
+        </script>
+    </body>
+</html
